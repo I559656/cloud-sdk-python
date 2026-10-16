@@ -1280,7 +1280,7 @@ class TestCmisQuery:
 
 
 # ---------------------------------------------------------------
-# URL path injection — security regression tests (CWE-88)
+# URL path injection — security regression tests
 # ---------------------------------------------------------------
 
 

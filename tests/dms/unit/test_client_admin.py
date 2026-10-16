@@ -451,11 +451,10 @@ class TestDeleteConfig:
 
 
 class TestUrlInjectionPrevention:
-    """Regression tests for CWE-88 path-injection in ID parameters.
+    """Regression tests: caller-supplied IDs with path metacharacters must be rejected.
 
-    A caller that passes a user-controlled value containing slashes,
-    dot-segments, or query metacharacters must never reach the HTTP layer
-    — the client must raise ValueError before building the request.
+    Slashes, dot-segments, and query characters in an ID could redirect the
+    authenticated request to unintended endpoints before it reaches the HTTP layer.
     """
 
     # repo_id sinks
