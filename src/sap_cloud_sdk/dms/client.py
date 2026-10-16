@@ -58,6 +58,8 @@ def _safe_cmis_path(path: str) -> str:
                 f"Path traversal segment {seg!r} is not allowed in a CMIS path"
             )
     return "/".join(quote(seg, safe="") for seg in segments)
+
+
 # ---------------------------------------------------------------------------
 
 
